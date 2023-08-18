@@ -1,0 +1,23 @@
+<h1>
+  Buscando: <small>{{ e }}</small>
+</h1>
+<hr />
+
+<div class="row" *ngIf="heroes.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">No existen resultados</div>
+  </div>
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4 animated fadeIn">
+  <div class="col" *ngFor="let heroe of heroes; let i = index">
+    <div class="card h-100">
+      <img src="{{ heroe.img }}" class="card-img-top" alt="..." />
+      <div class="card-body d-flex row">
+        <h5 class="card-title text-center">{{ heroe.nombre }}</h5>
+        <p class="card-text text-center">
+          {{ heroe.bio}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
