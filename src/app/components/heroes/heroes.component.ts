@@ -1,10 +1,7 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.css']
+  selector: "app-heroes",
+  templateUrl: "./heroes.component.html",
 })
-export class HeroesComponent {
-
-}
+export class HeroesComponent {}
