@@ -1,1 +1,19 @@
-<p class="animated fadeIn">heroes works!</p>
+<div class="row row-cols-1 row-cols-md-3 g-4 animated fadeIn">
+  <div class="col" *ngFor="let heroe of heroes; let i = index">
+    <div class="card h-100">
+      <img src="{{ heroe.img }}" class="card-img-top" alt="..." />
+      <div class="card-body d-flex row">
+        <h5 class="card-title text-center">{{ heroe.nombre }}</h5>
+        <p class="card-text text-center">
+          {{ heroe.bio.substring(0, 100) + "..." }}
+        </p>
+        <button 
+        (click)="verHeroe(i)"
+        type="button" class="btn btn-outline-success">
+         <!--  <a [routerLink]="['/heroe', i]"></a> -->
+          ver mas...
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
